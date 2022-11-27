@@ -87,4 +87,11 @@
 		_t _n[0]; \
 	}
 
+#ifdef static_assert
+#undef static_assert
+#endif
+
+#define static_assert(expr, ...)		__static_assert(expr, ## __VA_ARGS__, #expr)
+#define __static_assert(expr, msg, ...) _Static_assert(expr, msg)
+
 #endif /* _LINUXKPI_LINUX_COMPILER_H_ */
