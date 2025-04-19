@@ -84,7 +84,7 @@ static void candlelightfd_setup(USBD_GS_CAN_HandleTypeDef *hcan)
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 	/* FDCAN */
 
@@ -101,7 +101,7 @@ static void candlelightfd_setup(USBD_GS_CAN_HandleTypeDef *hcan)
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStruct.Alternate = GPIO_AF3_FDCAN1;
-	HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 }
 
 static void candlelightfd_phy_power_set(can_data_t *channel, bool enable)
