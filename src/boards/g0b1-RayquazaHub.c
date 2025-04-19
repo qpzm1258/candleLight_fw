@@ -38,8 +38,8 @@ THE SOFTWARE.
    UART_RX  PA10
    USB_P    PA12
    USB_N    PA11
-   CAN1_RX  PD8
-   CAN1_TX  PD9
+   CAN1_RX  PB8
+   CAN1_TX  PB9
    CAN1_S   PC13
 */
 
